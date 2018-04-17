@@ -1,0 +1,11 @@
+.CoordInput {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  background-color: rgb(231, 255, 231);
+  border: 1px solid black;
+  padding: 1vh;
+}
+.CoordInput > label {
+  margin-bottom: 1vh;
+}
