@@ -1,23 +1,10 @@
 import React, { Component } from 'react';
-import CoordInput from './components/CoordInput.js';
-import AddressInput from './components/AddressInput.js';
-import ConvertButton from './components/ConvertButton.js';
+import { connect } from 'react-redux'
+import Router from './routes'
 
-import './App.css';
-
-class App extends Component {
-  render() {
+const App = () => {
     return (
-      <div className="App">
-        <h1> Geolocation Converter</h1>
-        <ConvertButton />
-        <div className="Inputs">
-          <CoordInput />
-          <AddressInput />
-        </div>
-      </div>
+      <Router />
     );
-  }
-}
-
+};
 export default App;

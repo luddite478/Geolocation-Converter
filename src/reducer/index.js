@@ -1,11 +1,19 @@
 const initialValue = {
   address: '',
   lat: '',
-  lng: ''
+  lng: '',
+  key: '',
+  loggedIn: false
 }
 
 export default function todos(state = initialValue, action) {
-  if(action.type === 'UPDATE_ADDRESS'){
+  if(action.type === 'LOGIN'){
+    return {
+      ...state,
+      loggedIn: true,
+      key: action.payload
+    }
+  } else if(action.type === 'UPDATE_ADDRESS'){
     return {
       ...state,
       address: action.payload

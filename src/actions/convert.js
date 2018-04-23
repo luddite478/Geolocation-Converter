@@ -1,7 +1,7 @@
 const googleKey = require('../../config').googleKey
 
 export default dispatch => ({
-    convert: (appState) => {
+    convert: appState => {
       if(appState.lat === '' && appState.lng === ''){
         let encodedAddress = encodeURI(appState.address)
         fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}&key=${googleKey}`)
